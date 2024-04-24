@@ -104,5 +104,5 @@ model = AutoModelForCausalLM.from_pretrained(
 model = PeftModel.from_pretrained(model, new_model)
 model = model.merge_and_unload()
 
-model.push_to_hub(new_model, use_temp_dir=False, private=True)
-tokenizer.push_to_hub(new_model, use_temp_dir=False, private=True)
+model.push_to_hub(new_model, use_temp_dir=False)
+tokenizer.push_to_hub(new_model, use_temp_dir=False)
